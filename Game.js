@@ -32,8 +32,8 @@ function loadRandomGuess() {
 }
 
 function checkWord() {
-
-
+    let userInput = document.getElementById("userInput").value;
+    alert("userInput: " + userInput)
 }
 
 function addLettersButton() {
