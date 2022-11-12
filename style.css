@@ -4,15 +4,30 @@ img {
     float: left;
 }
 
+#mainTitle {
+    font-size: 50px;
+    font-family: "Gabriola";
+    text-align: center;
+}
+
+#Description {
+    font-size: 35px;
+    font-family: "Gabriola";
+    text-align: center;
+}
+
+.Row1 input {
+    height: 50px;
+    width: 50px;
+
+    text-align: center;
+
+}
+
+
 body {
     color: white;
     background: black;
-}
-
-#mainTitle {
-    font-size: 50px;
-    font-family: Calibri, serif;
-    text-align: center;
 }
 
 
@@ -22,10 +37,3 @@ body {
 /*    height: 50px;*/
 /*    width: 50px;*/
 /*}*/
-
-
-div {
-    font-size: 30px;
-    text-align: center;
-
-}

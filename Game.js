@@ -1,5 +1,4 @@
-
-function randomWordToGuess() {
+function createRandomWordToGuess() {
     const words = [
         "חביתה",
         "ילקוט",
@@ -21,16 +20,20 @@ function randomWordToGuess() {
         "בקבוק",
         "נימוס",
         "ציפור"]
-    let randomIndex = Math.ceil(Math.random() * 20);
+    let randomIndex = Math.floor(Math.random() * 20);
     let randomWord = words[randomIndex];
     alert(randomWord)
+    return randomWord;
 }
 
-function checkWord()
- {
-//     let l0 = document.().type.concat(0);
-//     alert(l0)
-////jhgh
+function loadRandomGuess() {
+    let randomWord = createRandomWordToGuess();
+    document.getElementById("random").innerText = randomWord;
+}
+
+function checkWord() {
+
+
 }
 
 function addLettersButton() {

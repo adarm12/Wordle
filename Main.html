@@ -7,27 +7,19 @@
     <script src="Game.js" type="text/javascript"></script>
     <img src="AS.jpg">
 </head>
-<body>
 
-<div id="mainTitle">
-    Wordle
-</div>
-<div id="Description">
-    Welcome to our game web
-</div>
-
-<div class="guessRow">
-    <button type="button" onclick="randomWordToGuess()"> go!</button>
-</div>
+<body onload=loadRandomGuess()>
+<input type="hidden" id="random">
+<div id="mainTitle"> Wordle</div>
+<div id="Description"> Welcome to our game web :)</div>
 
 <div class="Row1">
-    <input type="text">
-    <input type="text">
-    <input type="text">
-    <input type="text">
-    <input type="text">
-    <button type="button" onclick="checkWord()"> checkAnswer</button>
+    <label>
+        <input
+        type="text" id="index00"/>
+    </label>
 </div>
+<button type="button" onclick="checkWord()"> checkWord</button>
 
 </body>
 </html>
