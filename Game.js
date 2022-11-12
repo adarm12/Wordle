@@ -27,10 +27,10 @@ function randomWordToGuess() {
 }
 
 function checkWord()
-{
-    // let l0 = document.().type.concat(0);
-    // alert(l0)
-
+// {
+//     let l0 = document.().type.concat(0);
+//     alert(l0)
+////jhgh
 }
 
 function addLettersButton() {
