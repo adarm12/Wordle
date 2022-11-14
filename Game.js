@@ -32,7 +32,11 @@ function loadRandomGuess() {
 }
 
 function checkWord() {
-    let userInput = document.getElementById("userInput").value;
+    let userInput = "";
+    for (let i = 4; i >= 0; i--) {
+        let index = i + ""
+        userInput = userInput + document.getElementById("userInput" + index).value;
+    }
     alert("userInput: " + userInput)
 }
 
@@ -81,3 +85,6 @@ const guessRows = [
     '', '', '', '', '',
     '', '', '', '', '',
     '', '', '', '', '']
+
+for (let i = 0; i < guessRows.length; i++) {
+}
