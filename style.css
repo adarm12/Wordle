@@ -17,15 +17,17 @@ img {
 }
 
 .Rows input {
+    place-items: center;
     height: 50px;
     width: 50px;
     text-align: center;
-    place-items: center;
+    margin-bottom: 3px;
 }
 
 body {
     color: white;
     background: black;
+    align-items: center;
 }
 
 

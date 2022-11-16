@@ -30,13 +30,12 @@ function loadRandomWordToGuess() {
 
 function splitRandomWord() {
     const randomWord = document.getElementById("random").innerText;
-    alert(randomWord + "התקבלה")
     const splitWord = new Array(randomWord.split(""))
     alert(splitWord);
 }
 
 function get() {
-    const a = document.getElementsByClassName("Row1").item(0).innerHTML.charAt(0);
+    const a = document.getElementsByClassName("Row1").item(0).getElementById("userInput0").value;
     alert(a +" helloooo");
 }
 function attachWord() {
