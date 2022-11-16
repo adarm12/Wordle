@@ -8,21 +8,46 @@
     <img src="AS.jpg">
 </head>
 
-<body onload=loadRandomGuess()>
+<body onload=loadRandomWordToGuess()>
 <input type="hidden" id="random">
 <div id="mainTitle"> Wordle</div>
 <div id="Description"> Welcome to our game web :)</div>
+<!--<input type="hidden" id="counterRows">0</input>-->
 
-<p><label class="Row1">
-    <input type="text" id="userInput0"/>
-    <input type="text" id="userInput1"/>
-    <input type="text" id="userInput2"/>
-    <input type="text" id="userInput3"/>
-    <input type="text" id="userInput4"/>
+<div class="Rows">
 
-</label></p>
+    <p><label class="Row1">
+        <input type="text" id="userInput0"/>
+        <input type="text" id="userInput1"/>
+        <input type="text" id="userInput2"/>
+        <input type="text" id="userInput3"/>
+        <input type="text" id="userInput4"/>
+    </label></p>
+    <p><label class="Row2">
+        <input type="text" id="userInput5"/>
+        <input type="text" id="userInput6"/>
+        <input type="text" id="userInput7"/>
+        <input type="text" id="userInput8"/>
+        <input type="text" id="userInput9"/>
+    </label></p>
+    <p><label class="Row3">
+        <input type="text" id="userInput10"/>
+        <input type="text" id="userInput11"/>
+        <input type="text" id="userInput12"/>
+        <input type="text" id="userInput13"/>
+        <input type="text" id="userInput14"/>
+    </label></p>
+    <p><label class="Row4">
+        <input type="text" id="userInput15"/>
+        <input type="text" id="userInput16"/>
+        <input type="text" id="userInput17"/>
+        <input type="text" id="userInput18"/>
+        <input type="text" id="userInput19"/>
+    </label></p>
+</div>
 
-<button onclick="checkWord()">checkWord</button>
+
+<button onclick="get()">checkWord</button>
 
 </body>
 </html>

@@ -16,13 +16,12 @@ img {
     text-align: center;
 }
 
-.Row1 input {
+.Rows input {
     height: 50px;
     width: 50px;
     text-align: center;
-
+    place-items: center;
 }
-
 
 body {
     color: white;

@@ -1,4 +1,4 @@
-function createRandomWordToGuess() {
+function loadRandomWordToGuess() {
     const words = [
         "חביתה",
         "ילקוט",
@@ -18,20 +18,28 @@ function createRandomWordToGuess() {
         "מונית",
         "רמזור",
         "בקבוק",
-        "נימוס",
+        "השראה",
         "ציפור"]
-    let randomIndex = Math.floor(Math.random() * 20);
-    let randomWord = words[randomIndex];
+    const randomIndex = Math.floor(Math.random() * 20);
+    const randomWord = words[randomIndex];
+    document.getElementById("random").innerText = randomWord;
     alert(randomWord)
+    splitRandomWord();
     return randomWord;
 }
 
-function loadRandomGuess() {
-    let randomWord = createRandomWordToGuess();
-    document.getElementById("random").innerText = randomWord;
+function splitRandomWord() {
+    const randomWord = document.getElementById("random").innerText;
+    alert(randomWord + "התקבלה")
+    const splitWord = new Array(randomWord.split(""))
+    alert(splitWord);
 }
 
-function checkWord() {
+function get() {
+    const a = document.getElementsByClassName("Row1").item(0).innerHTML.charAt(0);
+    alert(a +" helloooo");
+}
+function attachWord() {
     let userInput = "";
     for (let i = 4; i >= 0; i--) {
         let index = i + ""
@@ -39,6 +47,18 @@ function checkWord() {
     }
     alert("userInput: " + userInput)
 }
+
+function checkWord(word, randomWord) {
+    for (let i = 0; i < word.length; i++) {
+        if (word.charAt(i) == randomWord.charAt(i)) {
+            alert("משווים")
+            document.getElementById("")
+        }
+
+
+    }
+}
+
 
 function addLettersButton() {
     const keys = [
