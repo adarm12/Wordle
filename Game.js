@@ -24,13 +24,7 @@ function loadRandomWordToGuess() {
     const randomWord = words[randomIndex];
     document.getElementById("random").innerText = randomWord;
     alert(randomWord)
-    splitRandomWord();
     return randomWord;
-}
-
-function splitRandomWord() {
-    const randomWord = document.getElementById("random").innerText;
-    const splitWord = new Array(randomWord.split(""))
 }
 
 let rowCounter = 1;
