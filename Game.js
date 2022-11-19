@@ -34,20 +34,22 @@ function splitRandomWord() {
     alert(splitWord);
 }
 
-function get() {
-    const a = document.getElementsByClassName("Row1").item(0).getElementById("userInput0").value;
-    alert(a +" helloooo");
-}
+// function get() {
+//     const a = document.getElementsByClassName("Row1").item(0).getElementById("userInput0").value;
+//     alert(a +" helloooo");
+// }
 function attachWord() {
     let userInput = "";
     for (let i = 4; i >= 0; i--) {
         let index = i + ""
         userInput = userInput + document.getElementById("userInput" + index).value;
+        // userInput = userInput + document.getElementById("userInput " + index).value;
     }
     alert("userInput: " + userInput)
 }
 
 function checkWord(word, randomWord) {
+    let counter = "";
     for (let i = 0; i < word.length; i++) {
         if (word.charAt(i) == randomWord.charAt(i)) {
             alert("משווים")
@@ -56,6 +58,15 @@ function checkWord(word, randomWord) {
 
 
     }
+}
+
+function addLetter() {
+document.getElementById('userInput4').addEventListener('keydown',(e) => {
+    if (e.key === 'א' && e.ctrlKey){
+        e.preventDefault();
+        alert("pressed")
+    }
+});
 }
 
 

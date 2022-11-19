@@ -17,11 +17,19 @@ img {
 }
 
 .Rows input {
-    place-items: center;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     text-align: center;
     margin-bottom: 3px;
+}
+
+
+.Letters button {
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-right: 3px;
 }
 
 body {
@@ -30,10 +38,3 @@ body {
     align-items: center;
 }
 
-
-/*.Row1 {*/
-/*    font-size: 30px;*/
-/*    text-align: center;*/
-/*    height: 50px;*/
-/*    width: 50px;*/
-/*}*/

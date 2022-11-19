@@ -11,12 +11,12 @@
 <body onload=loadRandomWordToGuess()>
 <input type="hidden" id="random">
 <div id="mainTitle"> Wordle</div>
-<div id="Description"> Welcome to our game web :)</div>
+<div id="Description"> Welcome to our web game :)</div>
 <!--<input type="hidden" id="counterRows">0</input>-->
 
-<div class="Rows">
+<div style="text-align: center" class="Rows">
 
-    <div><label class="Row1">
+    <div><label class="Row1" id="userInput">
         <input type="text" id="userInput0"/>
         <input type="text" id="userInput1"/>
         <input type="text" id="userInput2"/>
@@ -46,8 +46,45 @@
     </label></div>
 </div>
 
+<div style="text-align: center">
+    <p>
+        <button onclick="attachWord()">checkWord</button>
+    </p>
+</div>
 
-<button onclick="get()">checkWord</button>
+<div style="text-align: center" class="Letters">
 
+    <div><label class="Letters1">
+        <button onclick="()">ק</button>
+        <button onclick="()">ר</button>
+        <button onclick="()">א</button>
+        <button onclick="()">ט</button>
+        <button onclick="()">ו</button>
+        <button onclick="()">ן</button>
+        <button onclick="()">ם</button>
+        <button onclick="()">פ</button>
+    </label></div>
+    <div><label class="Letters2">
+        <button onclick="()">ש</button>
+        <button onclick="()">ד</button>
+        <button onclick="()">ג</button>
+        <button onclick="()">כ</button>
+        <button onclick="()">ע</button>
+        <button onclick="()">י</button>
+        <button onclick="()">ח</button>
+        <button onclick="()">ל</button>
+        <button onclick="()">ך</button>
+    </label></div>
+    <div><label class="Letters2">
+        <button onclick="()">ז</button>
+        <button onclick="()">ס</button>
+        <button onclick="()">ב</button>
+        <button onclick="()">ה</button>
+        <button onclick="()">נ</button>
+        <button onclick="()">מ</button>
+        <button onclick="()">צ</button>
+        <button onclick="()">ת</button>
+    </label></div>
+</div>
 </body>
 </html>
