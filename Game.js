@@ -57,6 +57,7 @@ function checkWord(word, randomWord) {
         }
 
 
+
     }
 }
 
