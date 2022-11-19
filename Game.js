@@ -45,8 +45,11 @@ function clickEnter() {
 
 function checkWord(userWord) {
     const randomWord = document.getElementById("random").innerText;
-    if (userWord === randomWord)
+    if (userWord === randomWord) {
         console.log("find the word")
+        alert("You win!!!");
+        document.body.innerHTML = "You win!!!";
+    }
     //TODO end the program
     else {
         for (let i = 0; i < randomWord.length; i++) {
