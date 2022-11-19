@@ -6,31 +6,33 @@ img {
 
 #mainTitle {
     font-size: 50px;
-    font-family: "Gabriola";
+    font-family: "Gabriola", "Assistant SemiBold";
     text-align: center;
 }
 
 #Description {
     font-size: 35px;
-    font-family: "Gabriola";
+    font-family: "Gabriola", "Assistant SemiBold";
     text-align: center;
 }
 
 .Rows input {
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
+    font-size: 30px;
     text-align: center;
+    font-family: "Assistant SemiBold";
     margin-bottom: 3px;
 }
-
 
 
 .Letters button {
     height: 35px;
     width: 35px;
+    font-size: 18px;
     text-align: center;
+    font-family: "Assistant SemiBold";
     margin-bottom: 3px;
-    margin-right: 3px;
 }
 
 

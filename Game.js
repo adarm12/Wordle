@@ -36,18 +36,17 @@ function splitRandomWord() {
 let rowCounter = 1;
 
 function clickEnter() {
-
-    //TODO לא לאפשר לערןך
     //TODO ללא תאים ריקים
     let userInput = "";
     for (let i = 4; i >= 0 && rowCounter < 7; i--) {
         let index = i
         userInput = userInput + document.getElementById("Row" + rowCounter + "-cell" + index).value;
-        document.getElementById("Row" + rowCounter + "-cell" + index).disabled = false;
+        document.getElementById("Row" + rowCounter + "-cell" + index).disabled = true;
     }
     console.log("userInput: " + userInput)
-    rowCounter++
     checkWord(userInput)
+    rowCounter++
+
 }
 
 function checkWord(userWord) {
@@ -58,23 +57,21 @@ function checkWord(userWord) {
     else {
         for (let i = 0; i < randomWord.length; i++) {
             if (randomWord.indexOf(userWord.charAt(i)) === i) {
-                console.log(randomWord.charAt(i) + "נמצא במיקום ")
-                // document.getElementById("Row" + rowCounter + "-cell" + index).style.background = 'green';
-
+                console.log(randomWord.charAt(i) + "  נמצא במיקום ")
+                changeCellColor(i, 'green');
             } else if (randomWord.indexOf(userWord.charAt(i)) > -1) {
                 console.log(userWord.charAt(i) + " orange")
-                // changeCellColor(i, 'orange');
+                changeCellColor(i, 'orange');
             } else {
                 (console.log(userWord.charAt(i) + " gray"))
-                // changeCellColor(i, 'gray');
+                changeCellColor(i, 'gray');
             }
         }
     }
 }
 
 function changeCellColor(index, color) {
-    document.getElementById("Row" + rowCounter + "-cell" + index).style.background = color;
-
+    document.getElementById("Row" + rowCounter + "-cell" + (4 - index)).style.background = color;
 }
 
 //
