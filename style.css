@@ -17,8 +17,8 @@ img {
 }
 
 .Rows input {
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
     font-size: 30px;
     text-align: center;
     font-family: "Assistant SemiBold";
@@ -34,7 +34,6 @@ img {
     font-family: "Assistant SemiBold";
     margin-bottom: 3px;
 }
-
 
 body {
     color: white;
