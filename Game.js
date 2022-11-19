@@ -31,91 +31,81 @@ function loadRandomWordToGuess() {
 function splitRandomWord() {
     const randomWord = document.getElementById("random").innerText;
     const splitWord = new Array(randomWord.split(""))
-    alert(splitWord);
 }
 
-// function get() {
-//     const a = document.getElementsByClassName("Row1").item(0).getElementById("userInput0").value;
-//     alert(a +" helloooo");
-// }
-function attachWord() {
+let rowCounter = 1;
+
+function clickEnter() {
+    //TODO לא לאפשר לערןך
+    //TODO ללא תאים ריקים
     let userInput = "";
-    for (let i = 4; i >= 0; i--) {
-        let index = i + ""
-        userInput = userInput + document.getElementById("userInput" + index).value;
-        // userInput = userInput + document.getElementById("userInput " + index).value;
+    for (let i = 4; i >= 0 && rowCounter > 7; i--) {
+        let index = i
+        userInput = userInput + document.getElementById("Row" + rowCounter + "-cell" + index).value;
     }
-    alert("userInput: " + userInput)
+    console.log("userInput: " + userInput)
+    rowCounter++
+    checkWord(userInput)
 }
 
-function checkWord(word, randomWord) {
-    let counter = "";
-    for (let i = 0; i < word.length; i++) {
-        if (word.charAt(i) == randomWord.charAt(i)) {
-            alert("משווים")
-            document.getElementById("")
+function checkWord(userWord) {
+    const randomWord = document.getElementById("random").innerText;
+    if (userWord === randomWord)
+        console.log("find the word")
+    //TODO end the program
+    else {
+        for (let i = 0; i < randomWord.length; i++) {
+            if (randomWord.indexOf(userWord.charAt(i)) === i)
+                console.log(randomWord.charAt(i) + "נמצא במיקום ")
+            else if (randomWord.indexOf(userWord.charAt(i)) > -1)
+                console.log(userWord.charAt(i) + " orange")
+            else
+                (console.log(userWord.charAt(i) + " gray"))
         }
-
-
-
     }
 }
 
-function addLetter() {
-document.getElementById('userInput4').addEventListener('keydown',(e) => {
-    if (e.key === 'א' && e.ctrlKey){
-        e.preventDefault();
-        alert("pressed")
-    }
-});
+function changeCellColor(index,color)
+{
+    document.getElementById("Row" + rowCounter + "cell" + index)
 }
 
-
-function addLettersButton() {
-    const keys = [
-        'א' +
-        'ב' +
-        'ג' +
-        'ד' +
-        'ה' +
-        'ו' +
-        'ז' +
-        'ח' +
-        'ט' +
-        'י' +
-        'כ' +
-        'ל' +
-        'מ' +
-        'נ' +
-        'ס' +
-        'ע' +
-        'פ' +
-        'צ' +
-        'ק' +
-        'ר' +
-        'ש' +
-        'ת' +
-        'ף' +
-        'ך' +
-        'ץ' +
-        'ם' +
-        'Enter'
-    ]
-
-    for (let i = 0; i < keys.length; i++) {
-        const buttonElement = document.createElement('button')
-        buttonElement.textContent = key
-
-    }
-}
-
-const guessRows = [
-    '', '', '', '', '',
-    '', '', '', '', '',
-    '', '', '', '', '',
-    '', '', '', '', '',
-    '', '', '', '', '',
-    '', '', '', '', '']
-
-for (let i = 0; i < guessRows.length; i++) {
-}
+//
+// function addLettersButton() {
+//     const keys = [
+//         'א' +
+//         'ב' +
+//         'ג' +
+//         'ד' +
+//         'ה' +
+//         'ו' +
+//         'ז' +
+//         'ח' +
+//         'ט' +
+//         'י' +
+//         'כ' +
+//         'ל' +
+//         'מ' +
+//         'נ' +
+//         'ס' +
+//         'ע' +
+//         'פ' +
+//         'צ' +
+//         'ק' +
+//         'ר' +
+//         'ש' +
+//         'ת' +
+//         'ף' +
+//         'ך' +
+//         'ץ' +
+//         'ם' +
+//         'Enter'
+//     ]
+//
+//     keys.forEach(key => {
+//         const buttonElement = document.createElement('button')
+//         buttonElement.textContent = key
+//
+//         Keys.append(buttonElement)
+//     })
+// }

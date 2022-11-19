@@ -12,80 +12,93 @@
 <input type="hidden" id="random">
 <div id="mainTitle"> Wordle</div>
 <div id="Description"> Welcome to our web game :)</div>
-<!--<input type="hidden" id="counterRows">0</input>-->
 
 <div style="text-align: center" class="Rows">
 
-    <div><label class="Row1" id="userInput">
-        <input type="text" id="userInput0"/>
-        <input type="text" id="userInput1"/>
-        <input type="text" id="userInput2"/>
-        <input type="text" id="userInput3"/>
-        <input type="text" id="userInput4"/>
+    <div><label class="Row1">
+        <input type="text" maxlength="1" id="Row1-cell0"/>
+        <input type="text" maxlength="1" id="Row1-cell1"/>
+        <input type="text" maxlength="1" id="Row1-cell2"/>
+        <input type="text" maxlength="1" id="Row1-cell3"/>
+        <input type="text" maxlength="1" id="Row1-cell4"/>
     </label></div>
     <div><label class="Row2">
-        <input type="text" id="userInput5"/>
-        <input type="text" id="userInput6"/>
-        <input type="text" id="userInput7"/>
-        <input type="text" id="userInput8"/>
-        <input type="text" id="userInput9"/>
+        <input type="text" maxlength="1" id="Row2-cell0"/>
+        <input type="text" maxlength="1" id="Row2-cell1"/>
+        <input type="text" maxlength="1" id="Row2-cell2"/>
+        <input type="text" maxlength="1" id="Row2-cell3"/>
+        <input type="text" maxlength="1" id="Row2-cell4"/>
     </label></div>
     <div><label class="Row3">
-        <input type="text" id="userInput10"/>
-        <input type="text" id="userInput11"/>
-        <input type="text" id="userInput12"/>
-        <input type="text" id="userInput13"/>
-        <input type="text" id="userInput14"/>
+        <input type="text" maxlength="1" id="Row3-cell0"/>
+        <input type="text" maxlength="1" id="Row3-cell1"/>
+        <input type="text" maxlength="1" id="Row3-cell2"/>
+        <input type="text" maxlength="1" id="Row3-cell3"/>
+        <input type="text" maxlength="1" id="Row3-cell4"/>
     </label></div>
     <div><label class="Row4">
-        <input type="text" id="userInput15"/>
-        <input type="text" id="userInput16"/>
-        <input type="text" id="userInput17"/>
-        <input type="text" id="userInput18"/>
-        <input type="text" id="userInput19"/>
+        <input type="text" maxlength="1" id="Row4-cell0"/>
+        <input type="text" maxlength="1" id="Row4-cell1"/>
+        <input type="text" maxlength="1" id="Row4-cell2"/>
+        <input type="text" maxlength="1" id="Row4-cell3"/>
+        <input type="text" maxlength="1" id="Row4-cell4"/>
     </label></div>
+    <div><label class="Row5">
+        <input type="text" maxlength="1" id="Row5-cell0"/>
+        <input type="text" maxlength="1" id="Row5-cell1"/>
+        <input type="text" maxlength="1" id="Row5-cell2"/>
+        <input type="text" maxlength="1" id="Row5-cell3"/>
+        <input type="text" maxlength="1" id="Row5-cell4"/>
+    </label></div>
+    <div><label class="Row6">
+        <input type="text" maxlength="1" id="Row6-cell0"/>
+        <input type="text" maxlength="1" id="Row6-cell1"/>
+        <input type="text" maxlength="1" id="Row6-cell2"/>
+        <input type="text" maxlength="1" id="Row6-cell3"/>
+        <input type="text" maxlength="1" id="Row6-cell4"/>
+    </label></div>
+
 </div>
 
 
 <div style="text-align: center">
     <p>
-        <button onclick="attachWord()">checkWord</button>
+        <button onclick="clickEnter()">checkWord</button>
     </p>
 </div>
 
 <div style="text-align: center" class="Letters">
-
-    <div><label class="Letters1">
-        <button onclick="()">ק</button>
-        <button onclick="()">ר</button>
-        <button onclick="()">א</button>
-        <button onclick="()">ט</button>
-        <button onclick="()">ו</button>
-        <button onclick="()">ן</button>
-        <button onclick="()">ם</button>
-        <button onclick="()">פ</button>
-    </label></div>
-    <div><label class="Letters2">
-        <button onclick="()">ש</button>
-        <button onclick="()">ד</button>
-        <button onclick="()">ג</button>
-        <button onclick="()">כ</button>
-        <button onclick="()">ע</button>
-        <button onclick="()">י</button>
-        <button onclick="()">ח</button>
-        <button onclick="()">ל</button>
-        <button onclick="()">ך</button>
-    </label></div>
-    <div><label class="Letters2">
-        <button onclick="()">ז</button>
-        <button onclick="()">ס</button>
-        <button onclick="()">ב</button>
-        <button onclick="()">ה</button>
-        <button onclick="()">נ</button>
-        <button onclick="()">מ</button>
-        <button onclick="()">צ</button>
-        <button onclick="()">ת</button>
-    </label></div>
+    <div>
+        <button id="ק">ק</button>
+        <button id="ר">ר</button>
+        <button id="א">א</button>
+        <button id="ט">ט</button>
+        <button id="ו">ו</button>
+        <button id="ן">ן</button>
+        <button id="ם">ם</button>
+        <button id="פ">פ</button>
+    </div>
+    <!--    <div><label class="Letters2">-->
+    <button id="ש">ש</button>
+    <button id="ד">ד</button>
+    <button id="ג">ג</button>
+    <button id="כ">כ</button>
+    <button id="ע">ע</button>
+    <button onclick="()">י</button>
+    <button onclick="()">ח</button>
+    <button onclick="()">ל</button>
+    <button onclick="()">ך</button>
+    <!--    </label></div>-->
+    <!--    <div><label class="Letters3">-->
+    <button onclick="()">ז</button>
+    <button onclick="()">ס</button>
+    <button onclick="()">ב</button>
+    <button onclick="()">ה</button>
+    <button onclick="()">נ</button>
+    <button onclick="()">מ</button>
+    <button onclick="()">צ</button>
+    <button onclick="()">ת</button>
+    <!--    </label></div>-->
 </div>
 </body>
 </html>
