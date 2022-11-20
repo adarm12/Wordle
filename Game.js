@@ -29,7 +29,7 @@ function loadRandomWordToGuess() {
 
 let rowCounter = 1;
 
-function clickEnter() {
+function clickCheck() {
     //TODO ללא תאים ריקים
     let userInput = "";
     for (let i = 4; i >= 0 && rowCounter < 7; i--) {
@@ -40,7 +40,6 @@ function clickEnter() {
     console.log("userInput: " + userInput)
     checkWord(userInput)
     rowCounter++
-
 }
 
 function checkWord(userWord) {
@@ -71,7 +70,7 @@ function changeCellColor(index, color) {
     document.getElementById("Row" + rowCounter + "-cell" + (4 - index)).style.background = color;
 }
 
-//
+
 // function addLettersButton() {
 //     const keys = [
 //         'א' +
@@ -99,8 +98,7 @@ function changeCellColor(index, color) {
 //         'ף' +
 //         'ך' +
 //         'ץ' +
-//         'ם' +
-//         'Enter'
+//         'ם'
 //     ]
 //
 //     keys.forEach(key => {
@@ -110,3 +108,6 @@ function changeCellColor(index, color) {
 //         Keys.append(buttonElement)
 //     })
 // }
+
+
+
