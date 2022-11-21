@@ -2,9 +2,9 @@ function loadRandomWordToGuess() {
     const words = [
         "חביתה",
         "ילקוט",
-        "ענבים",
+        "חצאית",
         "עוגיה",
-        "דגנים", //5
+        "קוביה", //5
         "מאורר",
         "שמיכה",
         "מחברת",
@@ -23,7 +23,7 @@ function loadRandomWordToGuess() {
     const randomIndex = Math.floor(Math.random() * 20);
     const randomWord = words[randomIndex];
     document.getElementById("random").innerText = randomWord;
-    alert(randomWord)
+    console.log(randomWord);
     return randomWord;
 }
 
