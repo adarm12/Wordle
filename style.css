@@ -24,7 +24,6 @@ img {
     font-family: "Assistant SemiBold","Arial";
     text-align: center;
     margin-bottom: 3px;
-    direction: rtl;
 }
 
 .Letters button {
@@ -41,4 +40,6 @@ body {
     background: black;
     align-items: center;
     text-align: center;
+    direction: rtl;
+
 }
