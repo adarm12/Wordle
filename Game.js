@@ -27,12 +27,20 @@ function loadRandomWordToGuess() {
     return randomWord;
 }
 
+
+const letter = document.querySelectorAll("button")
+letter.forEach(keys => {
+    letter.addEventListener("click", this.textContent)
+    console.log(this.textContent)
+})
+
+
 let rowCounter = 1;
 
 function clickCheck() {
     //TODO ללא תאים ריקים
     let userInput = "";
-    for (let i = 4; i >= 0 && rowCounter < 7; i--) {
+    for (let i = 0; i <= 4 && rowCounter < 7; i++) {
         let index = i
         userInput = userInput + document.getElementById("Row" + rowCounter + "-cell" + index).value;
         document.getElementById("Row" + rowCounter + "-cell" + index).disabled = true;
@@ -67,47 +75,45 @@ function checkWord(userWord) {
 }
 
 function changeCellColor(index, color) {
-    document.getElementById("Row" + rowCounter + "-cell" + (4 - index)).style.background = color;
+    document.getElementById("Row" + rowCounter + "-cell" + index).style.background = color;
 }
 
+//
+// const keys = [
+//     'א' +
+//     'ב' +
+//     'ג' +
+//     'ד' +
+//     'ה' +
+//     'ו' +
+//     'ז' +
+//     'ח' +
+//     'ט' +
+//     'י' +
+//     'כ' +
+//     'ל' +
+//     'מ' +
+//     'נ' +
+//     'ס' +
+//     'ע' +
+//     'פ' +
+//     'צ' +
+//     'ק' +
+//     'ר' +
+//     'ש' +
+//     'ת' +
+//     'ף' +
+//     'ך' +
+//     'ץ' +
+//     'ם'
+// ]
+//
+// keys.forEach(letter => {
+//     const buttonElement = document.createElement("button");
+//     buttonElement.textContent = letter
+//     keys.appendChild(buttonElement)
+// })
 
-// function addLettersButton() {
-//     const keys = [
-//         'א' +
-//         'ב' +
-//         'ג' +
-//         'ד' +
-//         'ה' +
-//         'ו' +
-//         'ז' +
-//         'ח' +
-//         'ט' +
-//         'י' +
-//         'כ' +
-//         'ל' +
-//         'מ' +
-//         'נ' +
-//         'ס' +
-//         'ע' +
-//         'פ' +
-//         'צ' +
-//         'ק' +
-//         'ר' +
-//         'ש' +
-//         'ת' +
-//         'ף' +
-//         'ך' +
-//         'ץ' +
-//         'ם'
-//     ]
-//
-//     keys.forEach(key => {
-//         const buttonElement = document.createElement('button')
-//         buttonElement.textContent = key
-//
-//         Keys.append(buttonElement)
-//     })
-// }
 
 
 
