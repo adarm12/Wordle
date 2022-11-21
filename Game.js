@@ -1,70 +1,63 @@
 function loadRandomWordToGuess() {
     const randomWord = createRandomWord()
-    document.getElementById("random").innerText = randomWord;
+    document.getElementById("random").innerText = randomWord
     disable()
 }
 
 function createRandomWord() {
     const words = [
-        "חביתה", "ילקוט", "חצאית", "עוגיה", "קוביה",
-        "מאורר", "שמיכה", "מחברת", "שולחן", "מסגרת",
-        "תמונה", "שרשרת", "גומיה", "חולצה", "משאית",
-        "מונית", "רמזור", "בקבוק", "השראה", "ציפור"]
-    const randomIndex = Math.floor(Math.random() * 20);
-    const randomWord = words[randomIndex];
-    console.log(randomWord);
-    return randomWord;
+        "חגורה", "בורקס", "חצאית", "עוגיה", "קוביה",
+        "מגבון", "שמיכה", "מחברת", "שולחן", "מסגרת",
+        "תמונה", "מדינה", "גומיה", "חולצה", "משאית",
+        "מונית", "טלפון", "מנורה", "סיפור", "ציפור"]
+    const randomIndex = Math.floor(Math.random() * 20)
+    const randomWord = words[randomIndex]
+    console.log(randomWord)
+    return randomWord
 }
-
-function getRandomWord() {
-    document.getElementById("random").innerText;
-}
-
 
 function disable() {
     for (let i = 2; i < 7; i++) {
         for (let j = 0; j < 5; j++) {
-            document.getElementById("Row" + i + "-cell" + j).disabled = true;
+            document.getElementById("Row" + i + "-cell" + j).disabled = true
         }
     }
 }
 
-let rowCounter = 2;
+let rowCounter = 1;
 
 function clickCheck() {
-    //TODOללא תאים ריקים
-    do {
-        let userInput = "";
-        for (let i = 0; i <= 4 && rowCounter < 6; i++) {
-            let index = i
-            userInput = userInput + document.getElementById("Row" + rowCounter + "-cell" + index).value;
-        }
-    else
-        alert("אין להשאיר תאים ריקים")
-
-    } while (userInput.length != 5)
+    let userInput = "";
+    for (let i = 0; i <= 4 && rowCounter <= 6; i++) {
+        let index = i
+        userInput = userInput + document.getElementById("Row" + rowCounter + "-cell" + index).value
+    }
     console.log("userInput: " + userInput)
-    checkWord(userInput)
-    rowCounter++
-
+    if (userInput.length < document.getElementById("random").innerText.length) {
+        alert("אין להשאיר תאים ריקים")
+    } else {
+        checkWord(userInput)
+        rowCounter++
+        openNextRow()
+    }
 }
 
-
-//
-// const letter = document.querySelectorAll("button")
-// letter.forEach(keys => {
-//     letter.addEventListener("click", this.textContent)
-//     console.log(this.textContent)
-// }
+function openNextRow() {
+    if (rowCounter < 7) {
+        for (let i = 0; i <= 4; i++) {
+            document.getElementById("Row" + rowCounter + "-cell" + i).disabled = false
+        }
+    } else {
+        document.body.innerHTML = "הפסדת! המילה היא: " + document.getElementById("random").innerText;
+    }
+}
 
 function checkWord(userWord) {
-    const randomWord = document.getElementById("random").innerText;
+    const randomWord = document.getElementById("random").innerText
     if (userWord === randomWord) {
         console.log("find the word")
-        alert("You win!!!");
-        document.body.innerHTML = "You win!!!";
+        document.body.innerHTML = "ניצחת! כל הכבוד!!!"
     }
-    //TODO end the program
     else {
         for (let i = 0; i < randomWord.length; i++) {
             if (randomWord.indexOf(userWord.charAt(i)) === i) {
@@ -84,6 +77,14 @@ function checkWord(userWord) {
 function changeCellColor(index, color) {
     document.getElementById("Row" + rowCounter + "-cell" + index).style.background = color;
 }
+
+
+//
+// const letter = document.querySelectorAll("button")
+// letter.forEach(keys => {
+//     letter.addEventListener("click", this.textContent)
+//     console.log(this.textContent)
+// }
 
 //
 // const keyBoardLetters = [
