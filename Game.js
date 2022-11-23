@@ -69,7 +69,7 @@ function checkWord(userWord) {
             if (randomWord.indexOf(userWord.charAt(i)) === i) {
                 console.log(randomWord.charAt(i) + "  נמצא במיקום ")
                 changeCellColor(i, 'green');
-            } else if (randomWord.indexOf(userWord.charAt(i)) > -1) {
+            } else if (randomWord.indexOf(userWord.charAt(i)) > -1 ) {
                 console.log(userWord.charAt(i) + " orange")
                 changeCellColor(i, 'orange');
             } else {
