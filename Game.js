@@ -77,6 +77,7 @@ function checkWord(userWord) {
                 changeCellColor(i, 'gray');
             }
         }
+
     }
 }
 
