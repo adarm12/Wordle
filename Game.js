@@ -50,6 +50,9 @@ function openNextRow() {
         }
     } else {
         document.body.innerHTML = "הפסדת! המילה היא: " + document.getElementById("random").innerText;
+        setTimeout(() => {
+            location.reload()
+        }, 3000)
     }
 }
 
@@ -58,8 +61,10 @@ function checkWord(userWord) {
     if (userWord === randomWord) {
         console.log("find the word")
         document.body.innerHTML = "ניצחת! כל הכבוד!!!"
-    }
-    else {
+        setTimeout(() => {
+            location.reload()
+        }, 3000)
+    } else {
         for (let i = 0; i < randomWord.length; i++) {
             if (randomWord.indexOf(userWord.charAt(i)) === i) {
                 console.log(randomWord.charAt(i) + "  נמצא במיקום ")
@@ -78,7 +83,6 @@ function checkWord(userWord) {
 function changeCellColor(index, color) {
     document.getElementById("Row" + rowCounter + "-cell" + index).style.background = color;
 }
-
 
 
 //
