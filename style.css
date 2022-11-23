@@ -17,7 +17,14 @@ img {
     margin-top: -20px;
 }
 
-
+#checkWord{
+    height: 35px;
+    width: 150px;
+    font-size: 18px;
+    text-align: center;
+    font-family: "Assistant SemiBold","Arial";
+    margin-bottom: 3px;
+}
 .Rows input {
     height: 40px;
     width: 40px;

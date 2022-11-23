@@ -29,7 +29,6 @@ let currentCellFocus = 0
 
 function focusOnNext() {
     const currentFocus = document.getElementById("Row" + rowCounter + "-cell" + currentCellFocus).value.length
-    console.log(rowCounter + " + " + currentCellFocus)
     if (currentFocus === 1 && currentCellFocus < 4) {
         currentCellFocus++
         document.getElementById("Row" + rowCounter + "-cell" + currentCellFocus).focus()
@@ -72,7 +71,6 @@ function openNextRow() {
 function checkWord(userWord) {
     const randomWord = document.getElementById("random").innerText
     if (userWord === randomWord) {
-        console.log("find the word")
         document.body.innerHTML = "ניצחת! כל הכבוד!!! משחק חדש מיד"
         setTimeout(() => {
             location.reload()
@@ -105,40 +103,39 @@ function changeCellColor(index, color) {
 //     console.log(this.textContent)
 // }
 
-//
-// const keyBoardLetters = [
-//     'א' +
-//     'ב' +
-//     'ג' +
-//     'ד' +
-//     'ה' +
-//     'ו' +
-//     'ז' +
-//     'ח' +
-//     'ט' +
-//     'י' +
-//     'כ' +
-//     'ל' +
-//     'מ' +
-//     'נ' +
-//     'ס' +
-//     'ע' +
-//     'פ' +
-//     'צ' +
-//     'ק' +
-//     'ר' +
-//     'ש' +
-//     'ת' +
-//     'ף' +
-//     'ך' +
-//     'ץ' +
-//     'ם'
-// ]
-//
-// keyBoardLetters.forEach(letter => {
-//     const keyBoard = document.getElementById("keyBoard")
-//     const buttonElementLetter = document.createElement("button")
-//     buttonElementLetter.textContent = letter
-//     keyBoard.appendChild(buttonElementLetter)
-// })
-//
+
+const keyBoardLetters = [
+    'א' +
+    'ב' +
+    'ג' +
+    'ד' +
+    'ה' +
+    'ו' +
+    'ז' +
+    'ח' +
+    'ט' +
+    'י' +
+    'כ' +
+    'ל' +
+    'מ' +
+    'נ' +
+    'ס' +
+    'ע' +
+    'פ' +
+    'צ' +
+    'ק' +
+    'ר' +
+    'ש' +
+    'ת' +
+    'ף' +
+    'ך' +
+    'ץ' +
+    'ם'
+]
+
+keyBoardLetters.forEach(letter => {
+    const keyBoard = document.getElementById("keyBoard")
+    const buttonElementLetter = document.createElement("button")
+    buttonElementLetter.textContent = letter
+    keyBoard.appendChild(buttonElementLetter)
+})
