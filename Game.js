@@ -29,13 +29,14 @@ let currentRowFocus = 1
 let currentCellFocus = 0
 
 function focusOnNext() {
-    const currentFocusLength = document.getElementById("Row" + rowCounter + "-cell" + currentCellFocus).value.length
-    console.log(rowCounter + " , " + currentCellFocus)
-    if (currentFocusLength === 1 && currentCellFocus < 4) {
+    const currentFocus = document.getElementById("Row" + currentRowFocus + "-cell" + currentCellFocus).value.length
+    console.log(currentRowFocus + " + " + currentCellFocus)
+    if (currentFocus === 1 && currentCellFocus < 4) {
         currentCellFocus++
-        document.getElementById("Row" + rowCounter + "-cell" + currentCellFocus).focus()
+        document.getElementById("Row" + currentRowFocus + "-cell" + currentCellFocus).focus()
     } else {
         currentCellFocus = 0
+        document.getElementById("Row" + currentRowFocus + "-cell" + currentCellFocus).focus()
     }
 
 }
@@ -45,7 +46,8 @@ let rowCounter = 1;
 function clickCheck() {
     let userInput = "";
     for (let i = 0; i <= 4 && rowCounter <= 6; i++) {
-        userInput = userInput + document.getElementById("Row" + rowCounter + "-cell" + i).value
+        let index = i
+        userInput = userInput + document.getElementById("Row" + rowCounter + "-cell" + index).value
     }
     console.log("userInput: " + userInput)
     if (userInput.length < document.getElementById("random").innerText.length) {
