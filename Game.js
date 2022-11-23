@@ -36,7 +36,6 @@ function focusOnNext() {
     } else {
         currentCellFocus = 0
     }
-
 }
 
 let rowCounter = 1;
