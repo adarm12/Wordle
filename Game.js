@@ -13,7 +13,15 @@ function createRandomWord() {
     const randomIndex = Math.floor(Math.random() * 20)
     const randomWord = words[randomIndex]
     console.log(randomWord)
+
+
     return randomWord
+}
+
+function a() {
+    const randomWord = document.getElementById("random").valu;
+    const splitWord = randomWord.split("")
+    console.log(splitWord)
 }
 
 function disable() {
@@ -55,10 +63,8 @@ function openNextRow() {
 function checkWord(userWord) {
     const randomWord = document.getElementById("random").innerText
     if (userWord === randomWord) {
-        console.log("find the word")
         document.body.innerHTML = "ניצחת! כל הכבוד!!!"
-    }
-    else {
+    } else {
         for (let i = 0; i < randomWord.length; i++) {
             if (randomWord.indexOf(userWord.charAt(i)) === i) {
                 console.log(randomWord.charAt(i) + "  נמצא במיקום ")
@@ -78,6 +84,11 @@ function changeCellColor(index, color) {
     document.getElementById("Row" + rowCounter + "-cell" + index).style.background = color;
 }
 
+function moveOnMax(field, nextFieldID) {
+    if (field.value.length >= field.maxLength) {
+        document.getElementById(nextFieldID).focus();
+    }
+}
 
 //
 // const letter = document.querySelectorAll("button")
@@ -123,6 +134,3 @@ function changeCellColor(index, color) {
 //     keyBoard.appendChild(buttonElementLetter)
 // })
 //
-
-
-
