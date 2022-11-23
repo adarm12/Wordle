@@ -60,9 +60,9 @@ function openNextRow() {
         for (let i = 0; i <= 4; i++) {
             document.getElementById("Row" + rowCounter + "-cell" + i).disabled = false
         }
-
+        document.getElementById("Row" + rowCounter + "-cell" + currentCellFocus).focus()
     } else {
-        document.body.innerHTML = "הפסדת! המילה היא: " + document.getElementById("random").innerText + "משחק חדש יתחיל מיד";
+        document.body.innerHTML = "הפסדת! המילה היא: " + document.getElementById("random").innerText + " - משחק חדש יתחיל מיד";
         setTimeout(() => {
             location.reload()
         }, 3000)
