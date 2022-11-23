@@ -25,13 +25,27 @@ function disable() {
     }
 }
 
+let currentRowFocus = 1
+let currentCellFocus = 0
+
+function focusOnNext() {
+    const currentFocusLength = document.getElementById("Row" + rowCounter + "-cell" + currentCellFocus).value.length
+    console.log(rowCounter + " , " + currentCellFocus)
+    if (currentFocusLength === 1 && currentCellFocus < 4) {
+        currentCellFocus++
+        document.getElementById("Row" + rowCounter + "-cell" + currentCellFocus).focus()
+    } else {
+        currentCellFocus = 0
+    }
+
+}
+
 let rowCounter = 1;
 
 function clickCheck() {
     let userInput = "";
     for (let i = 0; i <= 4 && rowCounter <= 6; i++) {
-        let index = i
-        userInput = userInput + document.getElementById("Row" + rowCounter + "-cell" + index).value
+        userInput = userInput + document.getElementById("Row" + rowCounter + "-cell" + i).value
     }
     console.log("userInput: " + userInput)
     if (userInput.length < document.getElementById("random").innerText.length) {
@@ -48,6 +62,8 @@ function openNextRow() {
         for (let i = 0; i <= 4; i++) {
             document.getElementById("Row" + rowCounter + "-cell" + i).disabled = false
         }
+        currentRowFocus++
+
     } else {
         document.body.innerHTML = "הפסדת! המילה היא: " + document.getElementById("random").innerText + "משחק חדש יתחיל מיד";
         setTimeout(() => {
