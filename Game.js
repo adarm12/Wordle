@@ -49,7 +49,7 @@ function openNextRow() {
             document.getElementById("Row" + rowCounter + "-cell" + i).disabled = false
         }
     } else {
-        document.body.innerHTML = "הפסדת! המילה היא: " + document.getElementById("random").innerText;
+        document.body.innerHTML = "הפסדת! המילה היא: " + document.getElementById("random").innerText + "משחק חדש יתחיל מיד";
         setTimeout(() => {
             location.reload()
         }, 3000)
@@ -60,7 +60,7 @@ function checkWord(userWord) {
     const randomWord = document.getElementById("random").innerText
     if (userWord === randomWord) {
         console.log("find the word")
-        document.body.innerHTML = "ניצחת! כל הכבוד!!!"
+        document.body.innerHTML = "ניצחת! כל הכבוד!!! משחק חדש מיד"
         setTimeout(() => {
             location.reload()
         }, 3000)
