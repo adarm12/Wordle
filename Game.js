@@ -133,9 +133,9 @@ const keyBoardLetters = [
     'ם'
 ]
 
-keyBoardLetters.forEach(letter => {
-    const keyBoard = document.getElementById("keyBoard")
-    const buttonElementLetter = document.createElement("button")
-    buttonElementLetter.textContent = letter
-    keyBoard.appendChild(buttonElementLetter)
-})
+// keyBoardLetters.forEach(letter => {
+//     const keyBoard = document.getElementById("keyBoard")
+//     const buttonElementLetter = document.createElement("button")
+//     buttonElementLetter.textContent = letter
+//     keyBoard.appendChild(buttonElementLetter)
+// })
